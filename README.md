@@ -11,7 +11,7 @@
 
 *修改部分bug
 
-![index.html](https://github.com/nmweizi/wooyun//blob/master/wooyun/index.png)
+![index.html](https://github.com/nmweizi/wooyun/blob/master/wooyun/index.png?raw=true)
 
 ![list.html](https://github.com/mysterymask/wooyun/blob/master/wooyun/list.png)
 
