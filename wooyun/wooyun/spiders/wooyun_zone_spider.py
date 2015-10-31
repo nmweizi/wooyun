@@ -54,7 +54,7 @@ class WooyunSpider(Spider):
     def parse_list(self, response):
         article_urls =  response.selector.xpath("//div[@class='thread-title']/a/@href").extract()
         for article_url in article_urls:	
-            article_id = 'zone'+ article_url.split('/')[4]
+            article_id = 'zone' + article_url.split('/')[4]
             if self.is_in_db(article_id) == False:
                 yield Request(article_url,callback = self.parse_article)
                 #print article_url
@@ -68,10 +68,10 @@ class WooyunSpider(Spider):
         item['bug_title'] = sel.xpath("//div[@class='topic-title']/h3//text()").extract()[0]
         item['open_date'] = sel.xpath("//span[@class='addtime']/text()").extract()[0]
         item['bug_type'] = "zone"
-        item['bug_id'] = 'zone'+response.url.split('/')[4]
+        item['bug_id'] = 'zone'+ response.url.split('/')[4]
         #item['author'] =  sel.xpath("//h3[@class='wybug_author']/a/text()").extract() [0]
         item['author'] = sel.xpath("//div[@class='author-info']/a/text()").extract()[0]
-        item['html'] = sel.xpath('/*').extract()[0]
+        item['html'] = response.body
         #print "self.local_store_flag:" + self.local_store_flag
         if self.local_store_flag:
             item['image_urls'] = sel.xpath("//img[contains(@src,'http://zone.wooyun.org/upload/avatar')]/@src").extract()
