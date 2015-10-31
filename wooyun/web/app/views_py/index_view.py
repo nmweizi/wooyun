@@ -10,6 +10,9 @@ from db_util import *
 def index():
     bug_cous = get_all_counts("wooyun_bug")
     doc_cous = get_all_counts("wooyun_doc")
+    zone_cous = get_all_counts("wooyun_zone")
+
     return render_template("index.html",
     	bug_counts = bug_cous,
-    	doc_counts = doc_cous)
+    	doc_counts = doc_cous,
+        zone_counts = zone_cous)

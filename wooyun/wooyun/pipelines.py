@@ -34,10 +34,22 @@ class WooyunPipeline(object):
             .replace("http://wooyun.b0.upaiyun.com/static/css/95e46879.main.css","../../static/css/95e46879.main.css")\
             .replace("http://wooyun.b0.upaiyun.com/static/js/jquery.min.js", "../../static/js/jquery-1.4.2.min.js" )\
             .replace("http://wooyun.b0.upaiyun.com/static/js/bootstrap.min.js","../../static/js/bootstrap.min.js" )
-
+        elif item['content_type'] == 'wooyun_zone':
+            self.__db_collection = self.__db_database[DB_COLLECTION_ZONE]
+            item['html'] = item['html'].replace("http://zone.wooyun.org/themes/wooyun/css/style.css","/static/css/style_zone.css")\
+            .replace("http://zone.wooyun.org/editor/editor.css","/static/css/editor.css")\
+            .replace("http://zone.wooyun.org/source/js/jquery.js", "/static/js/jquery.js" )\
+            .replace("http://zone.wooyun.org/source/global.js.php","/static/js/global.js.php" )\
+            .replace("http://zone.wooyun.org/editor/editor.js","/static/js/editor.js" )\
 
         if item['local_store_flag'] == False:
-            html_url = "http://www.wooyun.org/bugs/"+item['bug_id']
+            if item['content_type'] == 'wooyun_bug':
+                html_url = "http://www.wooyun.org/bugs/"+item['bug_id']
+            elif item['content_type'] == 'wooyun_doc':
+                html_url = "http://drops.wooyun.org/tips/"+item['bug_id']
+            elif item['content_type'] == 'wooyun_zone':
+                html_url = "http://zone.wooyun.org/content/"+item['bug_id']
+
         else:
             if item['images']:                                              
                 for img_pos in item['images']:
