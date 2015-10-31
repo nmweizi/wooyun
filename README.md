@@ -1,8 +1,15 @@
 #wooyun爬虫及搜索
 
+
+
+
 **wooyun.org bug search**
 
-![index.html](https://github.com/mysterymask/wooyun/blob/master/wooyun/index.png)
+*Clone from (https://github.com/mysterymask/wooyun/)
+*增加论坛精华（http://zone.wooyun.org/）
+*修改部分bug
+
+![index.html](https://github.com/nmweizi/wooyun//blob/master/index.jpg)
 
 ![list.html](https://github.com/mysterymask/wooyun/blob/master/wooyun/list.png)
 

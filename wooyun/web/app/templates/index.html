@@ -37,7 +37,21 @@
     form_tmp.appendChild(input_tmp);           
     document.body.appendChild(form_tmp);
     form_tmp.submit();
-  } 
+  }
+
+  function search_zone_action() {
+    var params = document.getElementById("key_input").value;
+    var form_tmp = document.createElement("form");
+    form_tmp.action = "/zone_search";
+    form_tmp.method = "get";
+    form_tmp.style.display = "none";
+    var input_tmp = document.createElement("textarea");
+    input_tmp.name = "key_word";
+    input_tmp.value = params;
+    form_tmp.appendChild(input_tmp);
+    document.body.appendChild(form_tmp);
+    form_tmp.submit();
+  }
   </script>
 
 <div class="navbar navbar-inverse navbar-fixed-top">
@@ -59,6 +73,7 @@
                   <button type="submit" class="btn btn-primary dropdown-toggle btn-lg" data-toggle="dropdown"> <span class="caret"></span> </button>
                       <ul class="dropdown-menu" role="menu">
                       <li><a  type="submit"  href="javascript:search_doc_action()" >资料搜索</a></li>
+                      <li><a  type="submit"  href="javascript:search_zone_action()" >论坛精华搜索</a></li>
                       </ul>
                       
                </span>
@@ -67,7 +82,7 @@
           </div>
           <div class = "span12">
             <p >
-                   <h4>总计收录 {{bug_counts}} 个公开漏洞,{{doc_counts}}篇知识库</h4>
+                   <h4>总计收录 {{bug_counts}} 个公开漏洞,{{doc_counts}}篇知识库,{{zone_counts}}篇论坛精华</h4>
                 </p>
           </div>
       </div>
