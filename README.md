@@ -9,10 +9,6 @@
 
 *增加论坛精华（http://zone.wooyun.org/）
 
-
-*增加论坛精华（http://zone.wooyun.org/）
-
-
 *修改部分bug
 
 ![index.html](https://github.com/nmweizi/wooyun//blob/master/wooyun/index.png)
