@@ -33,7 +33,7 @@ DB_COLLECTION_ZONE = "wooyun_zone"
 
 
 
-LOCAL_IMAGES_STORE = '../images/'
+LOCAL_IMAGES_STORE = '/static/wooyun_res/images/'
 LOCAL_CSS_PATH = "../../css/style.css"
 LOCAL_JS_PATH =  "../../js/jquery-1.4.2.min.js"  
 

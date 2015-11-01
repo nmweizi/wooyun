@@ -75,6 +75,8 @@ class WooyunSpider(Spider):
         #print "self.local_store_flag:" + self.local_store_flag
         if self.local_store_flag:
             item['image_urls'] = sel.xpath("//img[contains(@src,'http://zone.wooyun.org/upload/avatar')]/@src").extract()
+            item['image_urls'] = item['image_urls'] + sel.xpath("//img[contains(@src,'http://static.wooyun.org/upload/image')]/@src").extract()
+
         else:
             item['image_urls'] = []
         item['local_store_flag'] = self.local_store_flag

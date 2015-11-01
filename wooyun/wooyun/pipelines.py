@@ -30,10 +30,10 @@ class WooyunPipeline(object):
             .replace("https://static.wooyun.org/static/js/jquery-1.4.2.min.js", LOCAL_JS_PATH)
         elif item['content_type'] == 'wooyun_doc':
             self.__db_collection = self.__db_database[DB_COLLECTION_DOC]
-            item['html'] = item['html'].replace("http://wooyun.b0.upaiyun.com/static/css/bootstrap.min.css","../../static/css/bootstrap.min.css")\
-            .replace("http://wooyun.b0.upaiyun.com/static/css/95e46879.main.css","../../static/css/95e46879.main.css")\
-            .replace("http://wooyun.b0.upaiyun.com/static/js/jquery.min.js", "../../static/js/jquery-1.4.2.min.js" )\
-            .replace("http://wooyun.b0.upaiyun.com/static/js/bootstrap.min.js","../../static/js/bootstrap.min.js" )
+            item['html'] = item['html'].replace("http://wooyun.b0.upaiyun.com/static/css/bootstrap.min.css","/static/css/bootstrap.min.css")\
+            .replace("http://wooyun.b0.upaiyun.com/static/css/95e46879.main.css","/static/css/95e46879.main.css")\
+            .replace("http://wooyun.b0.upaiyun.com/static/js/jquery.min.js", "/static/js/jquery-1.4.2.min.js" )\
+            .replace("http://wooyun.b0.upaiyun.com/static/js/bootstrap.min.js","/static/js/bootstrap.min.js" )
         elif item['content_type'] == 'wooyun_zone':
             self.__db_collection = self.__db_database[DB_COLLECTION_ZONE]
             item['html'] = item['html'].replace("http://zone.wooyun.org/themes/wooyun/css/style.css","/static/css/style_zone.css")\

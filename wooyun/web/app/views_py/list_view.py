@@ -10,6 +10,9 @@ from db_util import *
 from settings import *
 import math
 
+
+
+
 @app.route('/bug_search', methods = ['GET', 'POST']) 
 def bug_search():
     #search_param = request.form['bug_key']
