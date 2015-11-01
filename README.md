@@ -46,7 +46,11 @@ pymongo</br>
   
 * 由于页面没有知识库文章总量参数，因此无法通过数量判断更新量，更新时需手动输入参数。
 
-###4.web信息搜索
+###4.爬取乌云论坛精华
+
+* 在wooyuh/下运行默认命令：scrapy runspider wooyun/spider/wooyun_zone_spider.py，完成所有数据爬取。
+
+###5.web信息搜索
 
 web界面采用Flask框架作为web服务器，bootstrap作为前端
 
@@ -54,8 +58,9 @@ web界面采用Flask框架作为web服务器，bootstrap作为前端
 
 搜索：在浏览器通过http://localhost:5000进行搜索漏洞，多个关键字可以用空格分开。
 
-###5.其它
+###6.其它
 
 本程序只用于技术研究和个人使用，程序组件均为开源程序，漏洞来源于乌云公开漏洞，版权归wooyun.org
 
+nmweizi@163.com
 mysterymask@163.com
